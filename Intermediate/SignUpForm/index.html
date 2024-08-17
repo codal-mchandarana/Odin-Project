@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <section class="left_container">
+      <div class="logo_container">
+        <img
+          id="logo_img"
+          src="./images/odin-lined.png"
+          alt="odin-img"
+          srcset=""
+        />
+        <p id="logo_text">ODIN</p>
+      </div>
+    </section>
+    <section class="right_container">
+      <div class="header">
+        <h2>
+          This is not a real online service! You know you need something<br />
+          like this in your life to help you realize your deepest dreams.<br />
+          Sign up <em>now</em> to get started.
+        </h2>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <div class="signupform">
+        <form>
+          <h2>Let's do this!</h2>
+          <div class="form-body">
+            <label for="firstName">
+              FIRST NAME
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Your first name"
+                required
+            /></label>
+            <label for="lastName">
+              LAST NAME
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Your last name"
+                required
+              />
+            </label>
+            <label for="email">
+              EMAIL
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your e-mail address"
+                required
+              />
+            </label>
+            <label for="phoneNumber">
+              PHONE NUMBER
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Your phone number"
+                pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|
+                  2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|
+                  4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$"
+                required
+              />
+            </label>
+            <label for="password">
+              PASSWORD
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Your password"
+                required
+              />
+            </label>
+            <label for="confirmPassword">
+              CONFIRM PASSWORD
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+              />
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="submit-button">
+        <button type="submit" form="signupForm" id="submitButton">
+          Create account
+        </button>
+        <p id="loginPara">Already have an account? <a href="">Log in</a></p>
+      </div>
+    </section>
+  </body>
+</html>
