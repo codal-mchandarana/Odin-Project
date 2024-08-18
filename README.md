@@ -1,8 +1,11 @@
 1) Sign Up form
    
     a) First go Intermediate folder 
+
     b) Then go to SignUpForm folder
+
     c) Execute command 'npm i' in your terminal
+
     d) Execute 'npm start' in your terminal to run the project 
 
     Output :- 
