@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial;
+}
+
+/******** Grid Setup for website ********/
+
+main {
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar mainContent mainContent mainContent"
+    "sidebar mainContent mainContent mainContent"
+    "sidebar mainContent mainContent mainContent";
+}
+
+/******** Header ********/
+
+.header {
+  grid-area: header;
+  display: grid;
+  justify-content: center;
+  grid-template: 90px 90px/2.5fr 1fr;
+  padding: 0 3rem;
+}
+
+/* 1 portion of 4 */
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 38px 10px;
+  align-items: center;
+}
+
+.search-bar img {
+  height: 1.7rem;
+}
+
+.search-bar input {
+  height: 2rem;
+  width: 47rem;
+  border-radius: 1rem;
+  background-color: #e2e8f0;
+  border: none;
+}
+
+/* 2 portion of 4 */
+
+.profile-top-right {
+  display: grid;
+  grid-template-columns: 20px 50px 135px;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: end;
+  margin-right: 5px;
+}
+
+.profile-top-right img[alt="notification"] {
+  height: 1.7rem;
+}
+
+.profile-top-right p {
+  font-weight: 600;
+  font-size: 16px;
+  width: 9.5rem;
+  max-width: auto;
+}
+
+/* 3 portion of 4 */
+
+.welcome {
+  display: grid;
+  grid-template-areas:
+    "profileImg hi"
+    "profileImg username";
+  column-gap: 10px;
+  justify-content: start;
+}
+
+.welcome img {
+  height: 4rem;
+}
+
+.profile-img {
+  grid-area: profileImg;
+}
+
+.hi {
+  grid-area: hi;
+  position: relative;
+  top: 6px;
+  font-weight: 500;
+}
+
+.username {
+  grid-area: username;
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: relative;
+  bottom: 2px;
+}
+
+/* 4 portion of 4 */
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: start;
+  gap: 35px;
+}
+
+.buttons button {
+  color: white;
+  background-color: #1992d4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.buttons button:hover {
+  background-color: #1681bb;
+  cursor: pointer;
+  color: black;
+}
+
+/******** Side bar ********/
+
+.side-bar {
+  grid-area: sidebar;
+  background-color: #1992d4;
+  padding: 1rem 0 0 0.7rem;
+}
+
+.logo img {
+  height: 3.1rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  padding-top: 13px;
+}
+
+.logo {
+  color: white;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 10px;
+  padding: 12px 10px;
+  cursor: pointer;
+}
+
+.menu {
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 45px 30px;
+  padding: 10px;
+  align-items: center;
+}
+
+li:hover {
+  background-color: #1681bb;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+li img {
+  height: 1.8rem;
+}
+
+li p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/******** Main Content ********/
+
+.projects {
+  grid-area: projects;
+  padding-left: 1.3rem;
+}
+
+.main-content-headings {
+  margin-top: 2rem;
+}
+
+.main-content {
+  display: grid;
+  grid-area: mainContent;
+  background-color: #e2e8f0;
+  box-shadow: 0px 4px 8px #cfd4db inset;
+  grid-template-areas:
+    "projects projects projects announcements"
+    "projects projects projects announcements "
+    "projects projects projects trending"
+    "projects projects projects trending";
+  height: auto;
+  width: 100%;
+}
+
+/* 1 portion of 3 */
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5rem;
+  column-gap: 10px;
+  margin-top: 0.8rem;
+}
+
+.card {
+  display: grid;
+  border-left: 10px solid #f0b429;
+  height: 250px;
+  width: 410px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0px 25px 20px 25px;
+  box-shadow: 0px 3px 6px #aaaeb4;
+}
+
+.card-title {
+  display: flex;
+  align-items: flex-end;
+}
+
+.icons img {
+  height: 24px;
+}
+
+.icons {
+  display: flex;
+  column-gap: 1.7rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* 2 portion of 3 */
+
+.announcements {
+  grid-area: announcements;
+}
+
+.card-container {
+  box-sizing: content-box;
+  display: grid;
+  align-items: end;
+  width: 280px;
+  height: 310px;
+  background-color: #fff;
+  padding: 25px 30px;
+  padding-right: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #aaaeb4;
+  align-content: space-between;
+  margin-top: 1.2rem;
+}
+
+hr {
+  background: #cfd4db;
+  color: #cfd4db;
+}
+
+/* 3 portion of 3 */
+
+.trending {
+  grid-area: trending;
+}
+
+.trending-container {
+  display: grid;
+  row-gap: 1.4rem;
+  box-sizing: content-box;
+  width: 18rem;
+  background-color: #fff;
+  padding: 1.2rem 1.8rem;
+  padding-right: 2.3rem;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #aaaeb4;
+  margin-top: 1rem;
+}
+
+.trending-container img {
+  height: 4rem;
+}
+
+.profiles {
+  display: grid;
+  column-gap: 0.8rem;
+  grid-template-areas:
+    "accountProfile name"
+    "accountProfile userprofile";
+  align-items: center;
+  justify-content: start;
+}
+
+.profiles:hover {
+  cursor: pointer;
+  background-color: #aaaeb4;
+  border-radius: 15px;
+}
+
+.account-profile {
+  grid-area: accountProfile;
+}
+
+.name {
+  grid-area: name;
+  font-weight: bold;
+}
+
+.userprofile {
+  grid-area: userprofile;
+}
